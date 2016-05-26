@@ -1,0 +1,18 @@
+{
+  "name": "telegrambot",
+  "version": "1.0.0",
+  "description": "This bot calculates woke. ",
+  "main": "WokeBot.js",
+  "dependencies": {
+    "node-telegram-bot-api": "^0.21.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "woke"
+  ],
+  "author": "Sam Crochet",
+  "license": "ISC"
+}
