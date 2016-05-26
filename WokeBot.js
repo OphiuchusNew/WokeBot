@@ -189,11 +189,28 @@ function analyze(string,inUserId,inUsername,chatId,Name) {
 }
 
 function scores_all(chatId){
+	var message = "Score Board:\n";
+	var sorted_users = Users.sort(
+		(x, y) => y.value - x.value
+	)
+
+	for (var i=0; i < sorted_users.length; i++){
+		var user = sorted_users[i];
+		message += `${i+1}. ${user.username}: ${user.value}\n`
+ 	}
+
+ 	bot.sendMessage(chatId,message);
+}
+
+
+/*
+//Retired stores_all function RIP you lasted 2 hours. 
+function scores_all(chatId){
 	for(var i=0; i<Users.length; i++){
 		var msg = Users[i].username + ":" + Users[i].value;
 		bot.sendMessage(chatId,msg);
 	}
 }
-
+ */
 
 
