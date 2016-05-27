@@ -178,6 +178,7 @@ function analyze(string,inUserId,inUsername,chatId,Name) {
 			if(Users[x].value < -3000){
 				var msg = Name + ", you are basically satan. Your score is: " + Users[x].value; 
 				bot.sendMessage(chatId,msg);
+			
 			}
 		}
 
@@ -201,6 +202,13 @@ function scores_all(chatId){
 
  	bot.sendMessage(chatId,message);
 }
+
+var interval = setInterval( function (){
+	Users[x].value = 0;
+	}
+}, 86400000);
+
+
 
 
 /*
